@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="es-GT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOZO Tecnología | Aplicaciones web para negocios en Guatemala</title>
+  <meta name="description" content="SOZO Tecnología desarrolla e implementa aplicaciones web para negocios en Guatemala: control de inventarios, gestión de clientes y pedidos, reservas y citas, y desarrollo a la medida.">
+  <meta name="theme-color" content="#0B1B34">
+  <meta property="og:title" content="SOZO Tecnología: creamos soluciones que impulsan tu negocio">
+  <meta property="og:description" content="Aplicaciones web para organizar inventarios, clientes, pedidos y citas. Implementación, capacitación y soporte en Guatemala.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/sozo-logo-full.png">
+  <link rel="icon" type="image/png" href="assets/sozo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<!-- Iconos (estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#29C0F2"/><stop offset="1" stop-color="#1A55C8"/></linearGradient>
+  </defs>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+  <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="2" x2="6" y1="14" y2="14"/><line x1="10" x2="14" y1="8" y2="8"/><line x1="18" x2="22" y1="16" y2="16"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label="SOZO Tecnología, ir al inicio">
+      <img src="assets/sozo-mark.png" alt="" width="40" height="40">
+      <span class="brand-text">
+        <span class="brand-name">SOZO</span>
+        <span class="brand-sub">Tecnología</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#aplicaciones">Aplicaciones web</a></li>
+        <li><a href="#soluciones">Soluciones</a></li>
+        <li><a href="#personalizado">Desarrollo a la medida</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta-mobile" href="#contacto" data-request="demo">Solicitar demostración</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm header-cta" href="#contacto" data-request="demo">Solicitar demo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ INICIO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <h1>Tu negocio merece herramientas que <span class="accent">trabajen contigo.</span></h1>
+        <p class="lead"><strong>Creamos soluciones que impulsan tu negocio.</strong> Desarrollamos e implementamos aplicaciones web que ayudan a los negocios a organizar sus operaciones, administrar información y optimizar sus procesos. Soluciones digitales pensadas para las necesidades reales de cada empresa.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#contacto" data-request="demo">Solicitar demostración <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost btn-lg" href="#aplicaciones">Ver aplicaciones</a>
+        </div>
+        <ul class="hero-points">
+          <li><svg class="icon"><use href="#i-check"/></svg> Acceso desde cualquier navegador</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Implementación y capacitación</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Soporte en Guatemala</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="mock-window mock-main">
+          <div class="mock-bar"><span></span><span></span><span></span><em>app.sozo / panel</em></div>
+          <div class="mock-body">
+            <aside class="mock-side">
+              <img src="assets/sozo-mark-white.png" alt="" width="26" height="26">
+              <i class="on"></i><i></i><i></i><i></i><i></i>
+            </aside>
+            <div class="mock-content">
+              <div class="mock-kpis">
+                <div><small>Ventas del mes</small><b>Q48,320</b><span class="up">+12.4%</span></div>
+                <div><small>Pedidos activos</small><b>36</b><span class="up">+5</span></div>
+                <div><small>Existencias bajas</small><b>4</b><span class="warn">Revisar</span></div>
+              </div>
+              <div class="mock-chart">
+                <div class="bars">
+                  <i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:50%"></i><i style="--h:71%"></i><i style="--h:64%"></i><i style="--h:83%"></i><i style="--h:76%"></i><i style="--h:92%"></i>
+                </div>
+              </div>
+              <div class="mock-rows">
+                <div><span class="dot ok"></span>Pedido #1048 · Entregado<em>Q1,250</em></div>
+                <div><span class="dot wait"></span>Pedido #1049 · En preparación<em>Q860</em></div>
+                <div><span class="dot new"></span>Pedido #1050 · Nuevo<em>Q2,140</em></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card fc-1">
+          <span class="fc-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+          <div><b>Cita confirmada</b><small>Hoy · 3:30 p. m.</small></div>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-icon alt"><svg class="icon"><use href="#i-package"/></svg></span>
+          <div><b>Alerta de inventario</b><small>Quedan 5 unidades</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFICIOS ============ -->
+  <section class="section benefits" aria-labelledby="t-beneficios">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="t-beneficios">Menos hojas sueltas, más control de tu operación</h2>
+        <p>Una aplicación web reúne la información de tu negocio en un solo lugar, accesible desde la computadora, la tableta o el teléfono.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit reveal">
+          <span class="icon-badge"><svg class="icon"><use href="#i-database"/></svg></span>
+          <h3>Información centralizada</h3>
+          <p>Productos, clientes, pedidos y citas en una sola plataforma, sin depender de cuadernos o archivos dispersos.</p>
+        </article>
+        <article class="benefit reveal">
+          <span class="icon-badge"><svg class="icon"><use href="#i-monitor"/></svg></span>
+          <h3>Acceso desde cualquier lugar</h3>
+          <p>Funciona en el navegador. No necesitas instalar programas ni comprar equipos especiales.</p>
+        </article>
+        <article class="benefit reveal">
+          <span class="icon-badge"><svg class="icon"><use href="#i-chart"/></svg></span>
+          <h3>Mejores decisiones</h3>
+          <p>Reportes claros para saber qué se vende, qué falta y cómo avanza tu negocio cada mes.</p>
+        </article>
+        <article class="benefit reveal">
+          <span class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></span>
+          <h3>Control y seguridad</h3>
+          <p>Usuarios con permisos, historial de movimientos y respaldos de información.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APLICACIONES ============ -->
+  <section class="section apps" id="aplicaciones" aria-labelledby="t-apps">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="t-apps">Aplicaciones listas para implementar en tu negocio</h2>
+        <p>Productos ya desarrollados que configuramos a tu medida. Empiezas a trabajar en días, no en meses.</p>
+      </div>
+
+      <div class="app-grid">
+        <!-- Inventario -->
+        <article class="app-card reveal">
+          <div class="app-shot shot-inventory" aria-hidden="true">
+            <div class="s-head"><b>Productos</b><span class="s-btn">+ Nuevo</span></div>
+            <div class="s-table">
+              <div class="s-row s-th"><span>Producto</span><span>Categoría</span><span>Exist.</span></div>
+              <div class="s-row"><span>Café molido 1 lb</span><span>Abarrotes</span><span class="pill ok">48</span></div>
+              <div class="s-row"><span>Aceite 900 ml</span><span>Abarrotes</span><span class="pill low">5</span></div>
+              <div class="s-row"><span>Jabón líquido</span><span>Limpieza</span><span class="pill ok">27</span></div>
+              <div class="s-row"><span>Papel toalla</span><span>Limpieza</span><span class="pill mid">12</span></div>
+            </div>
+          </div>
+          <div class="app-body">
+            <div class="app-title">
+              <span class="icon-badge sm"><svg class="icon"><use href="#i-package"/></svg></span>
+              <h3>SOZO Inventario</h3>
+            </div>
+            <p>Registro, control y seguimiento de productos y existencias, con alertas cuando algo está por agotarse.</p>
+            <ul class="tag-list" aria-label="Ideal para">
+              <li>Tiendas</li><li>Comercios</li><li>Distribuidores</li>
+            </ul>
+            <div class="app-foot">
+              <p class="price"><small>Implementación desde</small> Q3,500</p>
+              <button class="btn btn-ghost btn-sm" type="button" data-app="inventario">Ver ficha</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Gestión -->
+        <article class="app-card reveal">
+          <div class="app-shot shot-orders" aria-hidden="true">
+            <div class="s-head"><b>Pedidos</b><span class="s-search">Buscar cliente…</span></div>
+            <div class="s-kanban">
+              <div><small>Nuevos</small><i>#1050 · Ferretería López</i><i>#1051 · Ana Pérez</i></div>
+              <div><small>En proceso</small><i>#1047 · Distribuidora Maya</i></div>
+              <div><small>Entregados</small><i class="done">#1046 · Café Antigua</i><i class="done">#1045 · Hotel Lago</i></div>
+            </div>
+          </div>
+          <div class="app-body">
+            <div class="app-title">
+              <span class="icon-badge sm"><svg class="icon"><use href="#i-users"/></svg></span>
+              <h3>SOZO Gestión</h3>
+            </div>
+            <p>Centraliza la información de tus clientes y da seguimiento a cada pedido, desde que entra hasta que se entrega.</p>
+            <ul class="tag-list" aria-label="Ideal para">
+              <li>Empresas de servicios</li><li>Emprendedores</li><li>Pedidos recurrentes</li>
+            </ul>
+            <div class="app-foot">
+              <p class="price"><small>Implementación desde</small> Q2,500</p>
+              <button class="btn btn-ghost btn-sm" type="button" data-app="gestion">Ver ficha</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Reservas -->
+        <article class="app-card reveal">
+          <div class="app-shot shot-booking" aria-hidden="true">
+            <div class="s-head"><b>Agenda · Martes</b><span class="s-btn">Hoy</span></div>
+            <div class="s-agenda">
+              <div><time>9:00</time><i class="c1">Consulta general · M. Gómez</i></div>
+              <div><time>10:30</time><i class="c2">Limpieza dental · J. Ruiz</i></div>
+              <div><time>12:00</time><i class="free">Disponible</i></div>
+              <div><time>15:30</time><i class="c1">Control · L. Castillo</i></div>
+            </div>
+          </div>
+          <div class="app-body">
+            <div class="app-title">
+              <span class="icon-badge sm"><svg class="icon"><use href="#i-calendar"/></svg></span>
+              <h3>SOZO Reservas</h3>
+            </div>
+            <p>Administra citas, horarios y disponibilidad. Tus clientes reservan y tú tienes la agenda siempre al día.</p>
+            <ul class="tag-list" aria-label="Ideal para">
+              <li>Clínicas</li><li>Profesionales</li><li>Academias</li>
+            </ul>
+            <div class="app-foot">
+              <p class="price"><small>Implementación desde</small> Q2,000</p>
+              <button class="btn btn-ghost btn-sm" type="button" data-app="reservas">Ver ficha</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="note reveal">También disponible en modalidad de suscripción mensual o anual, desde <strong>Q150 al mes</strong>. Los precios son de referencia y se confirman en la cotización.</p>
+    </div>
+  </section>
+
+  <!-- ============ SOLUCIONES ============ -->
+  <section class="section solutions" id="soluciones" aria-labelledby="t-soluciones">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="t-soluciones">¿Qué necesitas resolver?</h2>
+        <p>Elige el área que quieres mejorar y te mostramos la solución que mejor se adapta.</p>
+      </div>
+
+      <div class="solutions-layout">
+        <div class="need-grid" role="radiogroup" aria-label="Necesidades del negocio">
+          <button class="need" type="button" role="radio" aria-checked="true" data-need="inventarios"><svg class="icon"><use href="#i-package"/></svg>Control de inventarios</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="ventas"><svg class="icon"><use href="#i-trending"/></svg>Administración de ventas</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="clientes"><svg class="icon"><use href="#i-users"/></svg>Gestión de clientes</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="pedidos"><svg class="icon"><use href="#i-cart"/></svg>Control de pedidos</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="citas"><svg class="icon"><use href="#i-calendar"/></svg>Reservaciones y citas</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="operaciones"><svg class="icon"><use href="#i-clipboard"/></svg>Administración de operaciones</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="gastos"><svg class="icon"><use href="#i-wallet"/></svg>Control de gastos</button>
+          <button class="need" type="button" role="radio" aria-checked="false" data-need="informacion"><svg class="icon"><use href="#i-briefcase"/></svg>Información empresarial</button>
+        </div>
+
+        <div class="need-result reveal" aria-live="polite">
+          <h3 id="need-title">SOZO Inventario</h3>
+          <p id="need-text">Registra productos, controla entradas y salidas y recibe alertas antes de quedarte sin existencias.</p>
+          <ul class="check-list" id="need-list"></ul>
+          <div class="need-actions">
+            <a class="btn btn-primary" id="need-cta" href="#contacto" data-request="demo">Solicitar demostración</a>
+            <button class="btn btn-link" type="button" id="need-more" data-app="inventario">Ver ficha completa <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESARROLLO PERSONALIZADO ============ -->
+  <section class="section custom" id="personalizado" aria-labelledby="t-custom">
+    <div class="container custom-grid">
+      <div class="custom-intro reveal">
+        <h2 id="t-custom">Si tu negocio es único, tu aplicación también puede serlo</h2>
+        <p>Cuando una aplicación prediseñada no cubre tu forma de trabajar, la construimos desde cero: análisis de requerimientos, diseño, base de datos, usuarios, reportes, pruebas e implementación.</p>
+
+        <div class="tiers">
+          <div class="tier"><span>Básico</span><b>Q6,000 – Q12,000</b></div>
+          <div class="tier"><span>Intermedio</span><b>Q12,000 – Q25,000</b></div>
+          <div class="tier"><span>Avanzado</span><b>Q25,000 – Q45,000</b></div>
+          <div class="tier"><span>Empresarial</span><b>Desde Q45,000</b></div>
+        </div>
+        <p class="small muted">Cada proyecto se cotiza después de definir su alcance técnico y funcional.</p>
+        <a class="btn btn-primary" href="#contacto" data-request="cotizacion">Solicitar cotización <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <ol class="process reveal" aria-label="Proceso de desarrollo">
+        <li><b>Recepción de la solicitud</b><span>Nos cuentas qué necesitas resolver.</span></li>
+        <li><b>Evaluación de necesidades</b><span>Analizamos tu operación y tus procesos.</span></li>
+        <li><b>Definición de funcionalidades</b><span>Acordamos qué hará la aplicación.</span></li>
+        <li><b>Propuesta técnica y económica</b><span>Alcance, tiempos y precio por escrito.</span></li>
+        <li><b>Aprobación del proyecto</b><span>Iniciamos con tu visto bueno.</span></li>
+        <li><b>Desarrollo</b><span>Construimos y te mostramos avances.</span></li>
+        <li><b>Pruebas y validación</b><span>Verificamos que todo funcione bien.</span></li>
+        <li><b>Implementación</b><span>Ponemos la aplicación en marcha.</span></li>
+        <li><b>Capacitación y entrega</b><span>Tu equipo aprende a usarla.</span></li>
+        <li><b>Soporte</b><span>Te acompañamos según el plan contratado.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section services" id="servicios" aria-labelledby="t-servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="t-servicios">Te acompañamos antes, durante y después</h2>
+        <p>No solo entregamos software: lo dejamos funcionando y te ayudamos a sacarle provecho.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service reveal"><svg class="icon"><use href="#i-rocket"/></svg><h3>Implementación</h3><p>Puesta en marcha de la aplicación, creación de usuarios y carga inicial de información.</p></article>
+        <article class="service reveal"><svg class="icon"><use href="#i-sliders"/></svg><h3>Configuración</h3><p>Ajustamos categorías, permisos, horarios y parámetros según tu negocio.</p></article>
+        <article class="service reveal"><svg class="icon"><use href="#i-pen"/></svg><h3>Personalización</h3><p>Reportes, módulos y cambios adicionales para adaptarla a tu forma de trabajar.</p></article>
+        <article class="service reveal"><svg class="icon"><use href="#i-cap"/></svg><h3>Capacitación</h3><p>Sesiones para usuarios y administradores, individuales o por paquetes.</p></article>
+        <article class="service reveal"><svg class="icon"><use href="#i-wrench"/></svg><h3>Mantenimiento</h3><p>Actualizaciones, respaldos, corrección de errores y supervisión técnica.</p></article>
+        <article class="service reveal"><svg class="icon"><use href="#i-headphones"/></svg><h3>Soporte técnico</h3><p>Atención de consultas con horarios y tiempos de respuesta definidos en contrato.</p></article>
+        <article class="service reveal"><svg class="icon"><use href="#i-plug"/></svg><h3>Integraciones</h3><p>Conectamos tu aplicación con servicios externos que ya utilizas.</p></article>
+        <article class="service service-cta reveal">
+          <h3>¿No sabes por dónde empezar?</h3>
+          <p>Cuéntanos cómo trabaja tu negocio y te recomendamos una solución.</p>
+          <a class="btn btn-light btn-sm" href="#contacto">Hablemos</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLANES ============ -->
+  <section class="section plans" id="planes" aria-labelledby="t-planes">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="t-planes">Un plan para cada etapa de tu negocio</h2>
+        <p>Suscripción mensual que incluye el uso de la aplicación, alojamiento y soporte. El precio final depende de la aplicación, la cantidad de usuarios y los recursos requeridos.</p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan reveal">
+          <h3>Básico</h3>
+          <p class="plan-for">Para negocios pequeños</p>
+          <p class="plan-price"><small>desde</small> Q150<span>/mes</span></p>
+          <ul class="check-list">
+            <li>Implementación de la aplicación</li>
+            <li>Configuración inicial</li>
+            <li>Usuario administrador</li>
+            <li>Capacitación introductoria</li>
+            <li>Soporte inicial definido</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="#contacto" data-request="cotizacion" data-plan="Básico">Cotizar plan Básico</a>
+        </article>
+
+        <article class="plan plan-featured reveal">
+          <span class="plan-badge">Más elegido</span>
+          <h3>Estándar</h3>
+          <p class="plan-for">Para negocios en crecimiento</p>
+          <p class="plan-price"><small>desde</small> Q300<span>/mes</span></p>
+          <ul class="check-list">
+            <li>Aplicación configurada</li>
+            <li>Varios usuarios</li>
+            <li>Configuración de permisos</li>
+            <li>Reportes disponibles</li>
+            <li>Capacitación</li>
+            <li>Soporte según el plan</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="#contacto" data-request="cotizacion" data-plan="Estándar">Cotizar plan Estándar</a>
+        </article>
+
+        <article class="plan reveal">
+          <h3>Profesional</h3>
+          <p class="plan-for">Para mayores necesidades operativas</p>
+          <p class="plan-price"><small>desde</small> Q600<span>/mes</span></p>
+          <ul class="check-list">
+            <li>Configuración ampliada</li>
+            <li>Usuarios y permisos</li>
+            <li>Funcionalidades avanzadas</li>
+            <li>Reportes</li>
+            <li>Capacitación administrativa</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="#contacto" data-request="cotizacion" data-plan="Profesional">Cotizar plan Profesional</a>
+        </article>
+      </div>
+      <p class="note reveal">¿Más de 20 usuarios o varias sucursales? El plan <strong>Empresarial</strong> parte de Q1,200 al mes. <a href="#contacto" data-request="cotizacion" data-plan="Empresarial">Pide tu cotización</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="section about" id="nosotros" aria-labelledby="t-nosotros">
+    <div class="container about-grid">
+      <div class="about-mark reveal" aria-hidden="true">
+        <span class="big-kanji" lang="ja">創造</span>
+        <span class="romaji">Sōzō · creación</span>
+      </div>
+      <div class="about-copy reveal">
+        <h2 id="t-nosotros">Nuestro nombre significa <em>creación</em></h2>
+        <p>En japonés, <span lang="ja">創造</span> (Sōzō) es el acto de crear algo nuevo. Esa es nuestra forma de trabajar: crear herramientas digitales útiles, accesibles y funcionales para pequeñas y medianas empresas, comercios, emprendedores y profesionales independientes de Guatemala.</p>
+        <div class="about-cards">
+          <div>
+            <h3>Misión</h3>
+            <p>Ofrecer aplicaciones web y soluciones tecnológicas que mejoren la administración, organización y productividad de los negocios.</p>
+          </div>
+          <div>
+            <h3>Visión</h3>
+            <p>Desarrollar herramientas digitales que contribuyan al crecimiento y la transformación de los negocios.</p>
+          </div>
+        </div>
+        <ul class="values">
+          <li><svg class="icon"><use href="#i-zap"/></svg>Soluciones prácticas</li>
+          <li><svg class="icon"><use href="#i-shield"/></svg>Confiabilidad</li>
+          <li><svg class="icon"><use href="#i-headphones"/></svg>Atención cercana</li>
+          <li><svg class="icon"><use href="#i-layers"/></svg>Mejora continua</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section contact" id="contacto" aria-labelledby="t-contacto">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <h2 id="t-contacto">Cuéntanos qué necesita tu negocio</h2>
+        <p>Solicita una demostración, una cotización o simplemente resuelve tus dudas. Te respondemos en horario hábil.</p>
+
+        <ul class="contact-list">
+          <li>
+            <a class="contact-item" id="wa-link" href="#" target="_blank" rel="noopener">
+              <span class="icon-badge"><svg class="icon"><use href="#i-chat"/></svg></span>
+              <span><b>WhatsApp</b><small id="wa-label">+502 5690 7669</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-item" id="mail-link" href="#">
+              <span class="icon-badge"><svg class="icon"><use href="#i-mail"/></svg></span>
+              <span><b>Correo</b><small id="mail-label">sazosolucionesdigitales@gmail.com</small></span>
+            </a>
+          </li>
+          <li>
+            <div class="contact-item">
+              <span class="icon-badge"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span><b>Guatemala</b><small>Atención presencial y virtual</small></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <fieldset class="req-type">
+          <legend>¿Qué deseas solicitar?</legend>
+          <div class="seg">
+            <label><input type="radio" name="tipo" value="demo" checked><span>Demostración</span></label>
+            <label><input type="radio" name="tipo" value="cotizacion"><span>Cotización</span></label>
+            <label><input type="radio" name="tipo" value="consulta"><span>Consulta</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-nombre">Nombre</label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          <p class="error" id="e-nombre" hidden>Escribe tu nombre.</p>
+        </div>
+        <div class="field">
+          <label for="f-negocio">Negocio</label>
+          <input id="f-negocio" name="negocio" type="text" autocomplete="organization" required>
+          <p class="error" id="e-negocio" hidden>Indica el nombre de tu negocio.</p>
+        </div>
+        <div class="field">
+          <label for="f-contacto">Teléfono o correo</label>
+          <input id="f-contacto" name="contacto" type="text" autocomplete="email" required aria-describedby="h-contacto">
+          <p class="hint" id="h-contacto">Por donde prefieres que te contactemos.</p>
+          <p class="error" id="e-contacto" hidden>Escribe un teléfono de 8 dígitos o un correo válido.</p>
+        </div>
+        <div class="field">
+          <label for="f-necesidad">¿Qué necesitas resolver?</label>
+          <textarea id="f-necesidad" name="necesidad" rows="4" required placeholder="Ej.: llevo el inventario en Excel y quiero alertas de existencias bajas."></textarea>
+          <p class="error" id="e-necesidad" hidden>Cuéntanos brevemente tu necesidad.</p>
+        </div>
+        <!-- Protección contra spam (campo trampa) -->
+        <div class="hp" aria-hidden="true">
+          <label for="f-web">No llenar</label>
+          <input id="f-web" name="web" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">
+          <svg class="icon"><use href="#i-chat"/></svg> Enviar por WhatsApp
+        </button>
+        <p class="form-foot">¿Prefieres correo? <button type="button" class="btn-link-inline" id="send-mail">Enviar por correo</button></p>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="cta-band" aria-labelledby="t-cta">
+    <div class="container cta-inner reveal">
+      <div>
+        <h2 id="t-cta">Mira la aplicación funcionando antes de decidir</h2>
+        <p>Agenda una demostración virtual sin compromiso.</p>
+      </div>
+      <a class="btn btn-light btn-lg" href="#contacto" data-request="demo">Agendar demostración <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="#inicio" aria-label="SOZO Tecnología, ir al inicio">
+        <img src="assets/sozo-mark-white.png" alt="" width="40" height="40">
+        <span class="brand-text"><span class="brand-name">SOZO</span><span class="brand-sub">Tecnología</span></span>
+      </a>
+      <p>Creamos soluciones que impulsan tu negocio.</p>
+    </div>
+    <nav aria-label="Aplicaciones">
+      <h3>Aplicaciones</h3>
+      <ul>
+        <li><button type="button" class="footer-link" data-app="inventario">SOZO Inventario</button></li>
+        <li><button type="button" class="footer-link" data-app="gestion">SOZO Gestión</button></li>
+        <li><button type="button" class="footer-link" data-app="reservas">SOZO Reservas</button></li>
+        <li><a href="#personalizado">Desarrollo a la medida</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Empresa">
+      <h3>Empresa</h3>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h3>Contacto</h3>
+      <ul>
+        <li><a class="js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a class="js-mail" href="#">Correo electrónico</a></li>
+        <li>Guatemala</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> SOZO Tecnología. Todos los derechos reservados.</p>
+    <p lang="ja" class="footer-kanji">創造</p>
+  </div>
+</footer>
+
+<a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg class="icon"><use href="#i-chat"/></svg>
+</a>
+
+<!-- Ficha de aplicación -->
+<dialog class="app-dialog" id="app-dialog" aria-labelledby="d-title">
+  <div class="d-inner">
+    <button class="d-close" type="button" aria-label="Cerrar ficha"><svg class="icon"><use href="#i-x"/></svg></button>
+    <header class="d-head">
+      <span class="icon-badge" id="d-icon"><svg class="icon"><use href="#i-package"/></svg></span>
+      <div>
+        <h2 id="d-title">SOZO Inventario</h2>
+      </div>
+    </header>
+    <p class="d-desc" id="d-desc"></p>
+    <div class="d-grid">
+      <section><h3>Necesidad que resuelve</h3><p id="d-need"></p></section>
+      <section><h3>Ideal para</h3><ul class="tag-list" id="d-for"></ul></section>
+      <section class="d-wide"><h3>Funcionalidades</h3><ul class="check-list cols" id="d-features"></ul></section>
+      <section><h3>Requisitos técnicos</h3><p>Computadora, tableta o teléfono con navegador actualizado y conexión a internet. No requiere instalación.</p></section>
+      <section><h3>Modalidad de contratación</h3><p>Pago único de implementación, o suscripción mensual o anual. Personalizaciones adicionales disponibles.</p></section>
+    </div>
+    <div class="d-price">
+      <div><small>Implementación</small><b id="d-impl"></b></div>
+      <div><small>Suscripción</small><b>desde Q150/mes</b></div>
+    </div>
+    <div class="d-actions">
+      <a class="btn btn-primary" href="#contacto" id="d-demo" data-request="demo">Solicitar demostración</a>
+      <a class="btn btn-ghost" href="#contacto" id="d-contact" data-request="cotizacion">Pedir cotización</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
