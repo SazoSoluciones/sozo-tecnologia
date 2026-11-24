@@ -81,7 +81,7 @@ APPS = {
         "name": "SOZO Gestión",
         "icon": "i-users",
         "subtitle": "Gestión de clientes y control de pedidos para negocios en Guatemala",
-        "title": "SOZO Gestión | Gestión de clientes y control de pedidos en Guatemala",
+        "title": "SOZO Gestión | Control de clientes y pedidos en Guatemala",
         "description": "Centraliza la información de tus clientes y da seguimiento a cada pedido, desde que entra hasta que se entrega. Implementación desde Q2,500 en Guatemala.",
         "lead": "Toda la información de tus clientes en un solo lugar y cada pedido con su estado, a la vista de todo tu equipo. Sin pedidos perdidos entre chats, llamadas y libretas.",
         "impl": ("Q2,500", "Q5,000", 2500, 5000),
