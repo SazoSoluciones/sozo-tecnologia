@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sazosoluciones.github.io/sozo-tecnologia/sitemap.xml
