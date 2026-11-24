@@ -99,7 +99,7 @@ const NEEDS = {
   pedidos: { app: "gestion", text: "Sigue cada pedido desde que entra hasta que se entrega, con estados claros para todo tu equipo.", list: ["Estados de pedidos", "Seguimiento de solicitudes", "Reportes de pedidos"] },
   citas: { app: "reservas", text: "Organiza tu agenda, controla la disponibilidad y confirma las reservas de tus clientes.", list: ["Agenda de citas", "Configuración de horarios", "Confirmación de reservas"] },
   operaciones: { app: null, title: "Desarrollo a la medida", text: "Cada operación es distinta. Diseñamos una aplicación con los módulos, usuarios y reportes que tu proceso necesita.", list: ["Análisis de tu proceso", "Módulos según tu operación", "Roles y permisos"] },
-  gastos: { app: null, title: "Control de gastos", text: "Registra gastos por categoría, adjunta comprobantes y compara mes a mes. Implementación desde Q2,000.", list: ["Gastos por categoría", "Reportes mensuales", "Usuarios con permisos"] },
+  gastos: { app: null, title: "Control de gastos", text: "Registra gastos por categoría, adjunta comprobantes y compara mes a mes para saber en qué se va tu dinero.", list: ["Gastos por categoría", "Reportes mensuales", "Usuarios con permisos"] },
   informacion: { app: null, title: "Desarrollo a la medida", text: "Centraliza documentos, registros y datos de tu empresa en una plataforma segura y fácil de consultar.", list: ["Base de datos propia", "Búsqueda de información", "Respaldos y seguridad"] },
 };
 

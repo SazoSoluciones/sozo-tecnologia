@@ -27,9 +27,8 @@ APPS = {
         "icon": "i-package",
         "subtitle": "Sistema de control de inventarios para negocios en Guatemala",
         "title": "SOZO Inventario | Sistema de control de inventarios en Guatemala",
-        "description": "Controla productos, existencias, entradas y salidas desde el navegador, con alertas de existencias bajas y reportes. Implementación desde Q3,500 en Guatemala.",
+        "description": "Controla productos, existencias, entradas y salidas desde el navegador, con alertas de existencias bajas y reportes. Implementación y soporte en Guatemala.",
         "lead": "Registra tus productos, controla entradas y salidas y recibe alertas antes de quedarte sin existencias. Todo desde el navegador, en la computadora, la tableta o el teléfono.",
-        "impl": ("Q3,500", "Q6,500", 3500, 6500),
         "pains_title": "Del cuaderno y el Excel a un inventario que cuadra",
         "pains": [
             ("Cuentas el inventario a mano y los números nunca cuadran.", "Cada entrada y salida queda registrada y las existencias se actualizan al momento."),
@@ -57,10 +56,10 @@ APPS = {
         "faq": [
             ("¿Necesito instalar algún programa?", "No. SOZO Inventario funciona en el navegador. Solo necesitas una computadora, tableta o teléfono con conexión a internet."),
             ("¿Puedo usarla desde el celular?", "Sí. La aplicación se adapta a la pantalla del teléfono, así puedes consultar existencias o registrar movimientos desde la bodega o el mostrador."),
-            ("Ya tengo mis productos en Excel, ¿tengo que escribirlos de nuevo?", "No es necesario. Ofrecemos el servicio de carga inicial de datos, desde Q500, para que empieces con tu inventario completo desde el primer día."),
+            ("Ya tengo mis productos en Excel, ¿tengo que escribirlos de nuevo?", "No es necesario. Ofrecemos el servicio de carga inicial de datos para que empieces con tu inventario completo desde el primer día."),
             ("¿Cuántos usuarios puedo tener?", "Depende del plan. El plan Básico incluye un usuario administrador y los planes Estándar y Profesional permiten varios usuarios, cada uno con sus permisos."),
             ("¿Cómo se protege la información de mi negocio?", "Cada persona entra con su propio usuario y contraseña, los permisos limitan lo que cada quien puede hacer y la información cuenta con copias de seguridad."),
-            ("¿Se puede adaptar a la forma en que trabajo?", "Sí. Podemos agregar campos, reportes o módulos adicionales como personalización, con precios desde Q500 según el alcance."),
+            ("¿Se puede adaptar a la forma en que trabajo?", "Sí. Podemos agregar campos, reportes o módulos adicionales como personalización, y te cotizamos según el alcance."),
         ],
         "mock": """
 <div class="app-shot lg shot-inventory" aria-hidden="true">
@@ -82,9 +81,8 @@ APPS = {
         "icon": "i-users",
         "subtitle": "Gestión de clientes y control de pedidos para negocios en Guatemala",
         "title": "SOZO Gestión | Control de clientes y pedidos en Guatemala",
-        "description": "Centraliza la información de tus clientes y da seguimiento a cada pedido, desde que entra hasta que se entrega. Implementación desde Q2,500 en Guatemala.",
+        "description": "Centraliza la información de tus clientes y da seguimiento a cada pedido, desde que entra hasta que se entrega. Implementación y soporte en Guatemala.",
         "lead": "Toda la información de tus clientes en un solo lugar y cada pedido con su estado, a la vista de todo tu equipo. Sin pedidos perdidos entre chats, llamadas y libretas.",
-        "impl": ("Q2,500", "Q5,000", 2500, 5000),
         "pains_title": "Cada cliente y cada pedido, en un solo lugar",
         "pains": [
             ("Los pedidos llegan por WhatsApp, llamadas y en persona, y alguno siempre se pierde.", "Todos los pedidos se registran en un solo lugar, sin importar por dónde llegaron."),
@@ -113,8 +111,8 @@ APPS = {
             ("¿Sirve si vendo servicios y no productos?", "Sí. Puedes registrar solicitudes de servicio y darles seguimiento con sus estados, igual que un pedido."),
             ("¿Necesito instalar algún programa?", "No. SOZO Gestión funciona en el navegador de tu computadora, tableta o teléfono, con conexión a internet."),
             ("¿Varias personas pueden usarla al mismo tiempo?", "Sí, en los planes Estándar y Profesional. Cada persona tiene su usuario y sus permisos, y todos ven la misma información actualizada."),
-            ("¿Puedo pasar mi lista de clientes actual?", "Sí. Con el servicio de carga inicial de datos, desde Q500, cargamos tus clientes para que empieces con la información completa."),
-            ("¿Se puede adaptar a mi proceso de ventas?", "Sí. Podemos ajustar estados, campos y reportes, o agregar módulos como personalización, con precios desde Q500 según el alcance."),
+            ("¿Puedo pasar mi lista de clientes actual?", "Sí. Con el servicio de carga inicial de datos cargamos tus clientes para que empieces con la información completa."),
+            ("¿Se puede adaptar a mi proceso de ventas?", "Sí. Podemos ajustar estados, campos y reportes, o agregar módulos como personalización, y te cotizamos según el alcance."),
         ],
         "mock": """
 <div class="app-shot lg shot-orders" aria-hidden="true">
@@ -131,9 +129,8 @@ APPS = {
         "icon": "i-calendar",
         "subtitle": "Sistema de reservas y agenda de citas para negocios en Guatemala",
         "title": "SOZO Reservas | Sistema de citas y reservas en Guatemala",
-        "description": "Administra citas, horarios y disponibilidad de tu negocio desde el navegador. Para clínicas, consultorios, academias y profesionales. Implementación desde Q2,000.",
+        "description": "Administra citas, horarios y disponibilidad desde el navegador. Para clínicas, consultorios, academias y profesionales en Guatemala. Implementación y soporte.",
         "lead": "Organiza tu agenda, controla la disponibilidad de horarios y confirma las reservas de tus clientes, sin citas cruzadas ni olvidos.",
-        "impl": ("Q2,000", "Q4,500", 2000, 4500),
         "pains_title": "Una agenda ordenada, sin citas cruzadas",
         "pains": [
             ("Las citas se anotan en una agenda de papel y a veces se cruzan.", "La agenda muestra los horarios disponibles y evita dar dos citas a la misma hora."),
@@ -164,7 +161,7 @@ APPS = {
             ("¿Necesito instalar algún programa?", "No. SOZO Reservas funciona en el navegador de tu computadora, tableta o teléfono, con conexión a internet."),
             ("¿Pueden usarla la recepción y los profesionales al mismo tiempo?", "Sí, en los planes Estándar y Profesional. Cada persona tiene su usuario y sus permisos, y todos ven la misma agenda actualizada."),
             ("¿Cómo se protege la información de mis clientes?", "Cada persona entra con su propio usuario y contraseña, los permisos limitan lo que cada quien puede ver y la información cuenta con copias de seguridad."),
-            ("¿Se puede adaptar a mi negocio?", "Sí. Podemos ajustar campos, reportes o agregar módulos como personalización, con precios desde Q500 según el alcance."),
+            ("¿Se puede adaptar a mi negocio?", "Sí. Podemos ajustar campos, reportes o agregar módulos como personalización, y te cotizamos según el alcance."),
         ],
         "mock": """
 <div class="app-shot lg shot-booking" aria-hidden="true">
@@ -211,7 +208,6 @@ def read_sprite():
 
 def jsonld(key, app):
     url = f"{SITE}aplicaciones/{key}/"
-    lo, hi = app["impl"][2], app["impl"][3]
     data = {
         "@context": "https://schema.org",
         "@graph": [
@@ -226,14 +222,6 @@ def jsonld(key, app):
                 "inLanguage": "es",
                 "image": SITE + "assets/og-image.jpg",
                 "featureList": [f[1] for f in app["features"]],
-                "offers": {
-                    "@type": "AggregateOffer",
-                    "priceCurrency": "GTQ",
-                    "lowPrice": lo,
-                    "highPrice": hi,
-                    "description": "Precio de implementación. También disponible por suscripción mensual desde Q150.",
-                    "areaServed": "GT",
-                },
                 "provider": {"@id": SITE + "#empresa"},
             },
             {
@@ -269,7 +257,6 @@ def page(key, app, sprite):
     url = f"{SITE}aplicaciones/{key}/"
     contact = f"{BASE}?solicitud=demo&amp;app={key}#contacto"
     quote = f"{BASE}?solicitud=cotizacion&amp;app={key}#contacto"
-    impl_lo, impl_hi = app["impl"][0], app["impl"][1]
 
     pains = "\n".join(
         f"""        <li class="compare-row">
@@ -397,7 +384,7 @@ def page(key, app, sprite):
           <a class="btn btn-primary btn-lg" href="{contact}">Solicitar demostración {icon("i-arrow")}</a>
           <a class="btn btn-ghost btn-lg js-wa" href="https://wa.me/50256907669" target="_blank" rel="noopener">{icon("i-chat")} Escribir por WhatsApp</a>
         </div>
-        <p class="price-line">Implementación desde <strong>{impl_lo}</strong> · Suscripción desde <strong>Q150 al mes</strong></p>
+        <p class="price-line"><strong>Pago único o suscripción</strong> · Demostración y cotización sin compromiso</p>
       </div>
       <div class="app-hero-visual">
 {app["mock"].strip()}
@@ -438,16 +425,18 @@ def page(key, app, sprite):
   <section class="section" aria-labelledby="t-precio">
     <div class="container price-grid">
       <div>
-        <h2 id="t-precio">Precio e implementación</h2>
-        <p class="muted">Elige pagar una sola vez por la implementación o usar la aplicación con una suscripción mensual o anual. El precio final depende de la cantidad de usuarios y de las personalizaciones, y lo confirmamos en la cotización.</p>
+        <h2 id="t-precio">Formas de contratación</h2>
+        <p class="muted">Elige la modalidad que mejor se adapte a tu negocio. El precio depende de la cantidad de usuarios y de las personalizaciones que necesites; te enviamos una cotización sin compromiso.</p>
         <div class="price-boxes">
           <div class="price-box">
-            <span>Implementación (pago único)</span>
-            <b>{impl_lo} – {impl_hi}</b>
+            <span>Pago único</span>
+            <b>Implementación</b>
+            <p>Pagas una vez y la aplicación queda instalada y configurada para tu negocio.</p>
           </div>
           <div class="price-box">
             <span>Suscripción</span>
-            <b>Desde Q150<small>/mes</small></b>
+            <b>Mensual o anual</b>
+            <p>Incluye el uso de la aplicación, alojamiento y soporte.</p>
             <a href="{BASE}#planes">Ver planes</a>
           </div>
         </div>

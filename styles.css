@@ -660,3 +660,9 @@ body.dialog-open { overflow: hidden; }
 .other-arrow { margin-left: auto; color: var(--blue-600); }
 @media (max-width: 640px) { .other-list { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .other-app:hover { transform: none; } .faq-chev { transition: none; } }
+
+/* Sin precios publicados */
+.price-text { font-size: 1rem; font-weight: 700; }
+.custom-includes { margin: 1.75rem 0 1rem; }
+.plan-for { margin-bottom: 1.5rem; }
+.price-box p { margin: 0; color: var(--text-muted); font-size: .93rem; }
