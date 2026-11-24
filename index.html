@@ -285,7 +285,7 @@
             </ul>
             <div class="app-foot">
               <p class="price"><small>Implementación desde</small> Q3,500</p>
-              <button class="btn btn-ghost btn-sm" type="button" data-app="inventario">Ver ficha</button>
+              <a class="btn btn-ghost btn-sm" href="aplicaciones/inventario/">Ver detalles</a>
             </div>
           </div>
         </article>
@@ -311,7 +311,7 @@
             </ul>
             <div class="app-foot">
               <p class="price"><small>Implementación desde</small> Q2,500</p>
-              <button class="btn btn-ghost btn-sm" type="button" data-app="gestion">Ver ficha</button>
+              <a class="btn btn-ghost btn-sm" href="aplicaciones/gestion/">Ver detalles</a>
             </div>
           </div>
         </article>
@@ -332,13 +332,13 @@
               <span class="icon-badge sm"><svg class="icon"><use href="#i-calendar"/></svg></span>
               <h3>SOZO Reservas</h3>
             </div>
-            <p>Administra citas, horarios y disponibilidad. Tus clientes reservan y tú tienes la agenda siempre al día.</p>
+            <p>Administra citas, horarios y disponibilidad. Tu agenda siempre al día, sin citas cruzadas ni olvidos.</p>
             <ul class="tag-list" aria-label="Ideal para">
               <li>Clínicas</li><li>Profesionales</li><li>Academias</li>
             </ul>
             <div class="app-foot">
               <p class="price"><small>Implementación desde</small> Q2,000</p>
-              <button class="btn btn-ghost btn-sm" type="button" data-app="reservas">Ver ficha</button>
+              <a class="btn btn-ghost btn-sm" href="aplicaciones/reservas/">Ver detalles</a>
             </div>
           </div>
         </article>
@@ -374,7 +374,7 @@
           <ul class="check-list" id="need-list"></ul>
           <div class="need-actions">
             <a class="btn btn-primary" id="need-cta" href="#contacto" data-request="demo">Solicitar demostración</a>
-            <button class="btn btn-link" type="button" id="need-more" data-app="inventario">Ver ficha completa <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="btn btn-link" id="need-more" href="aplicaciones/inventario/">Conocer la aplicación <svg class="icon"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -624,9 +624,9 @@
     <nav aria-label="Aplicaciones">
       <h3>Aplicaciones</h3>
       <ul>
-        <li><button type="button" class="footer-link" data-app="inventario">SOZO Inventario</button></li>
-        <li><button type="button" class="footer-link" data-app="gestion">SOZO Gestión</button></li>
-        <li><button type="button" class="footer-link" data-app="reservas">SOZO Reservas</button></li>
+        <li><a href="aplicaciones/inventario/">SOZO Inventario</a></li>
+        <li><a href="aplicaciones/gestion/">SOZO Gestión</a></li>
+        <li><a href="aplicaciones/reservas/">SOZO Reservas</a></li>
         <li><a href="#personalizado">Desarrollo a la medida</a></li>
       </ul>
     </nav>
@@ -657,35 +657,6 @@
 <a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <svg class="icon"><use href="#i-chat"/></svg>
 </a>
-
-<!-- Ficha de aplicación -->
-<dialog class="app-dialog" id="app-dialog" aria-labelledby="d-title">
-  <div class="d-inner">
-    <button class="d-close" type="button" aria-label="Cerrar ficha"><svg class="icon"><use href="#i-x"/></svg></button>
-    <header class="d-head">
-      <span class="icon-badge" id="d-icon"><svg class="icon"><use href="#i-package"/></svg></span>
-      <div>
-        <h2 id="d-title">SOZO Inventario</h2>
-      </div>
-    </header>
-    <p class="d-desc" id="d-desc"></p>
-    <div class="d-grid">
-      <section><h3>Necesidad que resuelve</h3><p id="d-need"></p></section>
-      <section><h3>Ideal para</h3><ul class="tag-list" id="d-for"></ul></section>
-      <section class="d-wide"><h3>Funcionalidades</h3><ul class="check-list cols" id="d-features"></ul></section>
-      <section><h3>Requisitos técnicos</h3><p>Computadora, tableta o teléfono con navegador actualizado y conexión a internet. No requiere instalación.</p></section>
-      <section><h3>Modalidad de contratación</h3><p>Pago único de implementación, o suscripción mensual o anual. Personalizaciones adicionales disponibles.</p></section>
-    </div>
-    <div class="d-price">
-      <div><small>Implementación</small><b id="d-impl"></b></div>
-      <div><small>Suscripción</small><b>desde Q150/mes</b></div>
-    </div>
-    <div class="d-actions">
-      <a class="btn btn-primary" href="#contacto" id="d-demo" data-request="demo">Solicitar demostración</a>
-      <a class="btn btn-ghost" href="#contacto" id="d-contact" data-request="cotizacion">Pedir cotización</a>
-    </div>
-  </div>
-</dialog>
 
 <script src="script.js"></script>
 </body>
